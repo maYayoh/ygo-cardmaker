@@ -7,12 +7,20 @@
         "order": 1,
         "active": true
     },
+    "fra": {
+        "name": "Français",
+        "formalName": "French",
+        "codeName": "fra",
+        "initialMessage": "Chargement en cours…",
+        "order": 2,
+        "active": true
+    },
     "jap": {
         "name": "日本語",
         "formalName": "Japanese",
         "codeName": "jap",
         "initialMessage": "フォントとスクリプトを読み込んでいます…",
-        "order": 2,
+        "order": 3,
         "style": {
             "font-family": "'Yu-Gi-Oh! DF Leisho 3'",
             "--width-label": "140px"
@@ -24,7 +32,7 @@
         "formalName": "Vietnamese",
         "codeName": "vie",
         "initialMessage": "Đang tải phông chữ…",
-        "order": 3,
+        "order": 4,
         "style": {
             "--width-label": "110px"
         },
