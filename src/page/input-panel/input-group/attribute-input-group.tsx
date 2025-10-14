@@ -36,20 +36,17 @@ export const AttributeInputGroup = ({
     language,
 }: AttributeInputGroup) => {
     const {
-        format,
         region,
         attribute,
         getUpdater,
     } = useCard(useShallow(({
         card: {
-            format,
             region,
             isLink,
             attribute,
         },
         getUpdater,
     }) => ({
-        format,
         region,
         isLink,
         attribute,
@@ -62,7 +59,7 @@ export const AttributeInputGroup = ({
     const changeRegion = useMemo(() => getUpdater('region'), [getUpdater]);
 
     const attributeList = useMemo(() => getAttributeList(region, language, showCreativeOption), [region, language, showCreativeOption]);
-    const extraAttributeList = useMemo(() => getExtraAttributeList(format, language, showCreativeOption), [format, language, showCreativeOption]);
+    const extraAttributeList = useMemo(() => getExtraAttributeList(region, language, showCreativeOption), [region, language, showCreativeOption]);
 
     return <>
         <RadioTrain

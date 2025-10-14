@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
-import { compressCardData, insertUrlParam, normalizeCardName } from 'src/util';
+import { normalizeCardName } from 'src/util';
 import { useCard } from './use-card';
 import { CardOpacity, PendulumSize } from 'src/model';
 import { useSetting } from './use-setting';
@@ -202,10 +202,7 @@ export const useCardExport = ({
 
                         await exportRef.current.currentPipeline;
                         if (relevant) {
-                            /** Never include art data here, it will easily exceed the limit of url length */
                             const normalizedCard = { ...currentCard, artData: '', backgroundData: '' };
-                            const condensedCard = JSON.stringify(compressCardData(normalizedCard));
-                            if (typeof condensedCard === 'string') insertUrlParam('data', condensedCard);
 
                             document.getElementById('export-canvas')?.classList.add('js-export-available');
                             document.getElementById('preview-canvas')?.classList.add('js-export-available');
