@@ -30,12 +30,11 @@ yarn-error.log*
 /project-image
 /backup
 /ygocarder
+/.idea
+.secret
+.env.production
 
 # GIMP
 *.xcf
 # Sentry Config File
 .env.sentry-build-plugin
-
-# Other
-.secret
-.env.production
