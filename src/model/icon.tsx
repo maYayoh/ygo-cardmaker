@@ -134,9 +134,9 @@ export const ExtraAttributeList = [
     },
 ];
 export const RegionMap: Record<string, { key: string, category: 'tcg' | 'ocg', fileKey: string }> = {
-    'jp': { key: 'jp', category: 'ocg', fileKey: 'ocg' },
+    'jp': { key: 'jp', category: 'ocg', fileKey: 'jp' },
     'ch': { key: 'ch', category: 'ocg', fileKey: 'ch' },
-    'en': { key: 'en', category: 'tcg', fileKey: 'tcg' },
+    'en': { key: 'en', category: 'tcg', fileKey: 'en' },
     'fr': { key: 'fr', category: 'tcg', fileKey: 'fr' },
     'de': { key: 'de', category: 'tcg', fileKey: 'de' },
     'it': { key: 'it', category: 'tcg', fileKey: 'it' },

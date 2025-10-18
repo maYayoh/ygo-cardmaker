@@ -98,7 +98,7 @@ export const getAttributeList = (region: string, dictionary: Record<string, stri
             : <Tooltip overlay={dictionary[nameKey]}>
                 <img
                     alt={dictionary[nameKey]}
-                    src={`${process.env.PUBLIC_URL}/asset/image/attribute/attr-${RegionMap[region]?.fileKey}-${name.toLowerCase()}.png`}
+                    src={`${process.env.PUBLIC_URL}/asset/image/attribute/${RegionMap[region]?.fileKey}/attr-${RegionMap[region].fileKey}-${name.toLowerCase()}.png`}
                 />
             </Tooltip>,
         value: name,
@@ -106,12 +106,12 @@ export const getAttributeList = (region: string, dictionary: Record<string, stri
     }))
     .filter(({ isCreative }) => isCreative === false || isCreative === showCreativeOption);
 
-export const getExtraAttributeList = (format: string, dictionary: Record<string, string>, showCreativeOption: boolean) => ExtraAttributeList
+export const getExtraAttributeList = (region: string, dictionary: Record<string, string>, showCreativeOption: boolean) => ExtraAttributeList
     .map(({ name, nameKey, isCreative }) => ({
         label: <Tooltip overlay={dictionary[nameKey]}>
             <img
                 alt={dictionary[nameKey]}
-                src={`${process.env.PUBLIC_URL}/asset/image/attribute/attr-${format}-${name.toLowerCase()}.png`}
+                src={`${process.env.PUBLIC_URL}/asset/image/attribute/${RegionMap[region]?.fileKey}/attr-${RegionMap[region].fileKey}-${name.toLowerCase()}.png`}
             />
         </Tooltip>,
         value: name,

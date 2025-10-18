@@ -4,7 +4,7 @@ import { Copiable, CopiableOverlayStyle, InternalPopover, RadioTrain, Resolution
 import { LanguageDataDictionary, useCard, useLanguage, useSetting } from 'src/service';
 import styled from 'styled-components';
 import { StyledActionIconButton } from './styled';
-import { downloadBlob, mergeClass, normalizeCardName, ygoCarderToCardMakerData, ygoCarderToExportableData } from 'src/util';
+import { downloadBlob, mergeClass, getShareUrl, normalizeCardName, ygoCarderToCardMakerData, ygoCarderToExportableData } from 'src/util';
 import { DownloadOutlined, CheckOutlined, CopyOutlined, FileImageOutlined, LinkOutlined } from '@ant-design/icons';
 import { Card } from 'src/model';
 import { useShallow } from 'zustand/react/shallow';
@@ -289,7 +289,7 @@ export const ExportPanel = forwardRef(({
                         <div>
                             <CardDataCopyButton
                                 disabled={isPartial}
-                                data={window.location.href}
+                                data={getShareUrl(internalCardData.ygocarder.data)}
                                 withText
                             >
                                 <div className="icon"><LinkOutlined /></div>

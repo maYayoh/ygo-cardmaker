@@ -279,7 +279,6 @@ export const CardThumb = ({
         backgroundType,
         cardIcon,
         def,
-        format,
         frame,
         leftFrame, rightFrame,
         hasBackground,
@@ -315,7 +314,7 @@ export const CardThumb = ({
     const normalizedCardName = normalizeCardName(name);
     const normalizedCardArt = artSource === 'offline'
         ? !art
-            ? 'https://i.imgur.com/jjtCuG5.png' // Placeholder
+            ? 'https://images-cdn.bridgemanimages.com/api/1.0/image/150.PIX.08161640.7055475/4613001.jpg' // Placeholder
             : artData
         : art;
     const normalizedBackgroundArt = backgroundSource === 'offline'
@@ -441,7 +440,7 @@ export const CardThumb = ({
                 {isSpeedSkill || attribute === 'NONE'
                     ? null
                     : <img className="attribute-icon"
-                        src={`${process.env.PUBLIC_URL}/asset/image/attribute/attr-${format}-${attribute.toLowerCase()}.png`}
+                        src={`${process.env.PUBLIC_URL}/asset/image/subfamily/subfamily-${attribute.toLowerCase()}.png`}
                         alt="Icon"
                     />}
                 {typeAbility.length > 0 && <div className="truncate">{joinedTypeAbility}</div>}

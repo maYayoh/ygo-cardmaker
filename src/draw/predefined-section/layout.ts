@@ -382,7 +382,7 @@ export const getLayoutDrawFunction = ({
             } = createCanvas(cardWidth * globalScale, (attributeY + attributeSize) * globalScale);
             await drawAsset(
                 attributeCtx,
-                `attribute/attr-${RegionMap[region].fileKey}-${attribute.toLowerCase()}.png`,
+                `attribute/${RegionMap[region].fileKey}/attr-${RegionMap[region].fileKey}-${attribute.toLowerCase()}.png`,
                 attributeX, attributeY,
             );
             const attributeFinish = otherFinish[0] ?? 'normal';

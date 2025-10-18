@@ -29,14 +29,14 @@ export const TotalAttributeIconPresetList = Object.values(RegionMap).map((region
             .flatMap(({ name }) => {
                 return {
                     imagePresetPath: `icon-${regionName}-${name.toLowerCase()}`,
-                    imagePresetSource: `attribute/attr-${regionName}-${name.toLowerCase()}.png` };
+                    imagePresetSource: `attribute/${regionName}/attr-${RegionMap[regionName].fileKey}-${name.toLowerCase()}.png` };
             }),
         ...[...(hasExtraAttribute ? ExtraAttributeList : [])]
             .filter(({ isOption }) => isOption === true)
             .flatMap(({ name }) => {
                 return {
                     imagePresetPath: `icon-${regionName}-${name.toLowerCase()}`,
-                    imagePresetSource: `attribute/attr-${regionName}-${name.toLowerCase()}.png` };
+                    imagePresetSource: `attribute/${regionName}/attr-${RegionMap[regionName].fileKey}-${name.toLowerCase()}.png` };
             }),
     ];
 });
